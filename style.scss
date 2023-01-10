@@ -10,4 +10,140 @@ $highlight: #f8716cff;
 }
 
 body {
+    background: $primary;
+    color: $text;
+    font-family: "League Spartan", sans-serif;
+    line-height: 1.5;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    padding: 4%;
+
+    text-align: center;
+
+    text-transform: lowercase;
+
+    user-select: none;
+}
+
+header {
+    h2 {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.switch-container {
+    display: flex;
+    background-color: $secondary;
+    border-radius: 2rem;
+    padding: 0.5rem;
+
+    z-index: 1;
+
+    @media screen and (max-width: 425px) {
+        flex-direction: column;
+    }
+
+    .switch-item {
+        padding: 0.5rem 1rem;
+        border-radius: 2rem;
+        opacity: 0.5;
+    }
+
+    .switch-item-active {
+        background-color: $highlight;
+        color: $secondary;
+        font-weight: bold;
+        opacity: 1;
+    }
+}
+
+.timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+
+    .timer-container {
+        background: linear-gradient(150deg, $secondary, $primary);
+        height: 40vh;
+        aspect-ratio: 1;
+        border-radius: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        box-shadow: -45px -45px 60px rgba(38, 42, 89, 0.7), 45px 45px 60px rgba(0, 0, 0, 0.2);
+
+        position: relative;
+
+        transition: 0.2s ease-in-out;
+
+        &:hover {
+            transform: scale(1.03);
+        }
+
+        .timer-progress-indicator {
+            background: $secondary;
+            height: 90%;
+            width: 90%;
+            border-radius: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            outline-offset: -1rem;
+            outline: 8px solid $highlight;
+        }
+
+        h1 {
+            font-size: 4rem;
+            line-height: 1;
+
+            text-align: center;
+        }
+
+        span {
+            text-transform: uppercase;
+            letter-spacing: 12px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 0.8rem;
+            margin-top: 1rem;
+            position: absolute;
+            bottom: 4.8rem;
+        }
+    }
+}
+
+main > button {
+    background: transparent;
+    border: none;
+    color: $text;
+
+    font-size: 24px;
+    opacity: 0.5;
+
+    transition: all 0.2s ease-in-out;
+
+    cursor: pointer;
+
+    &:hover {
+        opacity: 1;
+    }
 }
