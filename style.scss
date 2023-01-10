@@ -74,7 +74,22 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     overflow: visible;
+    gap: 1rem;
+
+    .action-button {
+        visibility: hidden;
+        cursor: pointer;
+        background: transparent;
+        color: $highlight;
+        font-weight: bold;
+        font-size: 1.25rem;
+        border: none;
+        padding: 0.5rem;
+        border-radius: 1rem;
+        text-transform: lowercase;
+    }
 
     .timer-container {
         background: linear-gradient(150deg, $secondary, $primary);
@@ -92,6 +107,8 @@ main {
         position: relative;
 
         transition: 0.2s ease-in-out;
+
+        cursor: pointer;
 
         &:hover {
             transform: scale(1.03);

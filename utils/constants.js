@@ -1,1 +1,1 @@
-let pomodoro_size = 1 * 60;
+let pomodoro_size = 2 * 60;

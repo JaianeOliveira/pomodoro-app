@@ -18,6 +18,10 @@
 
 		<script src="./utils/constants.js" defer></script>
 		<script src="./utils/index.js" defer></script>
+
+		<script src="./components/switch.js" defer></script>
+		<script src="./components/timer.js" defer></script>
+
 		<script src="./index.js" defer></script>
 
 		<title>Pomodoro</title>
@@ -35,14 +39,19 @@
 			</div>
 
 			<div class="timer">
-				<div class="timer-container">
+				<div class="timer-container" onclick="timerHandler()">
 					<div class="timer-progress-indicator">
-						<h1>00:00</h1>
+						<h1 id="display-timer">00:00</h1>
 					</div>
-					<span>Começar</span>
+					<span class="timer-status-indicator">Começar</span>
+				</div>
+
+				<div>
+					<button id="stop-button" class="action-button" onclick="stopTimer()">
+						<i class="ph-stop-fill"></i>
+					</button>
 				</div>
 			</div>
-
 			<button>
 				<i class="ph-gear-fill"></i>
 			</button>

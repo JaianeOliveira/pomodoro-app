@@ -4,6 +4,8 @@ const getPomodoroSize = (minutes = pomodoro_size) => {
 
 const getDisplayTimer = (pomodoro) => {
 	let minutes = Math.floor(pomodoro / 60);
-	let seconds = pomodoro;
-	return `${minutes}:${seconds}`;
+	let seconds = pomodoro - minutes * 60;
+	return `${minutes >= 10 ? minutes : `0${minutes}`}:${
+		seconds >= 10 ? seconds : `0${seconds}`
+	}`;
 };

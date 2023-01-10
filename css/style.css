@@ -59,7 +59,21 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   overflow: visible;
+  gap: 1rem;
+}
+.timer .action-button {
+  visibility: hidden;
+  cursor: pointer;
+  background: transparent;
+  color: #f8716c;
+  font-weight: bold;
+  font-size: 1.25rem;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  text-transform: lowercase;
 }
 .timer .timer-container {
   background: linear-gradient(150deg, #151932, #1e2140);
@@ -73,6 +87,7 @@ main {
   box-shadow: -45px -45px 60px rgba(38, 42, 89, 0.7), 45px 45px 60px rgba(0, 0, 0, 0.2);
   position: relative;
   transition: 0.2s ease-in-out;
+  cursor: pointer;
 }
 .timer .timer-container:hover {
   transform: scale(1.03);
